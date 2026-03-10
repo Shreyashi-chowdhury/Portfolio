@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+    <div class="logo">Shreyashi Chowdhury</div>
+
+    <nav>
+        <ul class="nav-items" id="navItems">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+        </ul>
+    </nav>
+
+    <button id="themeToggle" class="theme-btn">🌙</button>
+    <div class="menu-icon" id="menuIcon">=</div>
+</header>
+
+
+<section class="hero" id="home">
+
+   <!-- IMAGE SECTION --> 
+   <div class="image"> 
+    <img src="C:/Users/shrey/OneDrive/Pictures/Screenshot_20251029_151459.jpg" alt="Profile Image"> 
+   </div>
+
+    <div class="content">
+         <h1 class="title"> Shreyashi<br>Chowdhury 
+        </h1>
+
+        <div class="buttons">
+            <a href="#contact" class="btn">Contact</a>
+        </div>
+    </div>
+
+</section>
+
+<!-- ABOUT SECTION -->
+<section id="about" class="section about-section">
+    <div class="about-card">
+        <h2>About me</h2>
+
+        <p>
+            I’m <strong>Shreyashi Chowdhury</strong>, a tech enthusiast who loves
+            blending creativity with logic. I’m deeply interested in
+            Artificial Intelligence, Machine Learning, and problem-solving.
+        </p>
+
+        <p>
+            I believe in learning consistently, experimenting fearlessly,
+            and growing one step every day.
+        </p>
+    </div>
+</section>
+
+
+<!-- SKILLS SECTION -->
+<section id="skills" class="section skills-section">
+    <div class="skills-card">
+        <h2 class="type-text">Skills</h2>
+
+        <div class="skills-grid">
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">C</div>
+            <div class="skill">Python</div>
+            
+        </div>
+    </div>
+</section>
+
+<section id="projects" class="section skills-section">
+    <div class="skills-card">
+        <h2>Projects</h2>
+
+        <div class="skills-grid">
+            <div class="skill">No projects yet</div>
+        </div>
+
+    </div>
+</section>
+
+<section id="contact" class="section about-section">
+    <div class="about-card">
+        <h2>Contact</h2>
+
+        <p>
+            Want to collaborate, connect, or just say hi?
+        </p>
+
+        <p>
+            Email: shreyashichowdhury3@gmail.com <br>
+            Location : Kolkata , West Bengal
+        </p>
+
+    </div>
+</section>
+
+
+<script>
+    const menuIcon = document.getElementById("menuIcon");
+    const navItems = document.getElementById("navItems");
+
+    menuIcon.addEventListener("click", () => {
+       if (menuIcon.innerText == '='){
+        menuIcon.innerText = '×'
+        navItems.style.height='400px';
+    }
+    else {
+        menuIcon.innerText = '='
+        navItems.style.height='0px'
+    }
+    });
+
+    const toggleBtn = document.getElementById("themeToggle");
+
+    toggleBtn.addEventListener("click", () => {
+        document.body.classList.toggle("light");
+
+        if (document.body.classList.contains("light")) {
+            toggleBtn.textContent = "☀️";
+        } else {
+            toggleBtn.textContent = "🌙";
+        }
+    });
+
+    
+</script>
+
+</body>
+</html>
